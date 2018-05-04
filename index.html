@@ -82,15 +82,13 @@ crossorigin=""></script>
     map.scrollWheelZoom.disable()
 
      var bg = L.tileLayer('https://samizdat.cz/tiles/ton_b1/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution: 'mapová data © přispěvatelé <a target="_blank" href="http://osm.org">OpenStreetMap</a>, obrazový podkres <a target="_blank" href="http://stamen.com">Stamen</a>, <a target="_blank" href="https://samizdat.cz">Samizdat</a>, vrstva budov <a target="_blank" href="https://www.cuzk.cz/ruian/RUIAN.aspx">ČÚZK</a>'
     }).addTo(map);
 
     var houses = L.tileLayer('./tiles/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
     var geoNames =  L.tileLayer('https://samizdat.cz/tiles/ton_l2/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
     var utfGrid = new L.UtfGrid('./tiles/{z}/{x}/{y}.grid.json', {
